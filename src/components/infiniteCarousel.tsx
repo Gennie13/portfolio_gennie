@@ -1,7 +1,11 @@
 "use client"
 import React, { useEffect, useRef } from "react";
 import { Button } from "./ui/button";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
+export interface Skill {
+    name: string;
+}
 const InfiniteCarousel = ({skills}:{
     skills: string[]
 }) => {
@@ -24,17 +28,20 @@ const InfiniteCarousel = ({skills}:{
         addAnimation();
     }, []);
     return (
-        <div ref={scrollRef} className="w-full scroller ">
-            <div className="scroll_inner flex gap-4 py-4 animate-infinite_scroll">
-                {[...skills,...skills].map((skill, index) => {
-                    return (
-                        <Button key={index} className="min-w-max bg-violet-300 p-2 rounded-lg shadow-md text-gray-900">
-                            {skill}
-                        </Button>
-                    )
-                })}
+        <ScrollArea className="w-full">
+            <div ref={scrollRef} className="w-full scroller ">
+                <div className="scroll_inner flex gap-4 py-4 animate-infinite_scroll">
+                    {[...skills,...skills].map((skill, index) => {
+                        return (
+                            <Button key={index} className="min-w-max bg-violet-300 hover:text-white p-2 rounded-lg shadow-md text-gray-900">
+                                {skill}
+                            </Button>
+                        )
+                    })}
+                </div>
             </div>
-        </div>
+            <ScrollBar orientation="horizontal" />
+        </ScrollArea>
     )
 }
 

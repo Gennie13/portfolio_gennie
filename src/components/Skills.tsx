@@ -12,15 +12,6 @@ export default function Skills() {
   return (
     <div className="overflow-hidden w-full my-10">
       <h2 className="text-xl font-bold mb-4">Skills</h2>
-      <div className="relative w-full whitespace-nowrap">
-        <div className="flex animate-infinite_scroll  space-x-2  overflow-x-auto py-2">
-          {[...skills,...skills].map((skill, index) => (
-            <Button key={index} variant="secondary" className="min-w-max bg-blue-300">
-              {skill}
-            </Button>
-          ))}
-        </div>
-      </div>
 
 
       <InfiniteCarousel skills={skills}/>
