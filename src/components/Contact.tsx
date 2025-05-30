@@ -1,37 +1,64 @@
-"use client"
+"use client";
 import React from "react";
+import { Mail, Phone, Github, Linkedin } from "lucide-react";
+import { toast } from "sonner";
 
 export default function Contact() {
-    return(
-        <div className="mt-5 mb-20">
-            <h2 className="text-xl font-bold mb-4">Contact</h2>
-            <ul className="flex space-x-4 items-center mt-4">
-            <li className=""> 
-                <button className="text-gray-600 duration-300 hover:text-blue-600 transition-colors duration-300 text-xl" onClick={()=> {
-                    navigator.clipboard.writeText("+97699645862");
-                    alert("Утасны дугаар хуулсан");
-                }} aria-label="Утасны дугаар хуулсан"
+  return (
+    <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-white text-brand-black mb-20">
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-6 border-b-4 border-gray-200 inline-block">Contact</h2>
+        <ul className="flex justify-center space-x-6 mt-6">
+          {[
+            {
+              icon: <Phone className="w-6 h-6" />,
+              onClick: () => {
+                navigator.clipboard.writeText("+97699645862");
+                toast.success("Утасны дугаар хуулсан");
+              },
+              label: "Phone",
+              isButton: true,
+            },
+            {
+              icon: <Mail className="w-6 h-6" />,
+              href: "mailto:gereltsetseg@nit.edu.mn",
+              label: "Email",
+            },
+            {
+              icon: <Github className="w-6 h-6" />,
+              href: "https://github.com/Gennie13",
+              label: "GitHub",
+            },
+            {
+              icon: <Linkedin className="w-6 h-6" />,
+              href: "https://www.linkedin.com/in/gerelee-hurelee-a9871634a/",
+              label: "LinkedIn",
+            },
+          ].map((item, index) => (
+            <li key={index}>
+              {item.isButton ? (
+                <button
+                  onClick={item.onClick}
+                  aria-label={item.label}
+                  className="p-4 rounded-full border border-gray-300 hover:bg-gray-100 transition-all"
                 >
-                    <i className="ri-phone-line  border-1 rounded-full border-gray-600 p-2 hover:border-0 hover:bg-gray-300 duration-200"></i>
+                  {item.icon}
                 </button>
-                </li>
-                <li className=""><a href="mailto:gereltsetseg@nit.edu.mn" className="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-xl" aria-label="Send email to gereltsetseg@nit.edu.mn" >
-                <i className="ri-mail-line border-1 rounded-full border-gray-600 p-2 hover:border-0 hover:bg-gray-300 duration-200"></i>
-                </a></li>
-                <li className=""><a href="https://github.com/Gennie13" className="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-xl" aria-label="Github" >
-                <i className="ri-github-line border-1 rounded-full border-gray-600 p-2 hover:border-0 hover:bg-gray-300 duration-200"></i>
-                </a></li>
-
-                <li className=""><a href="https://www.linkedin.com/in/gerelee-hurelee-a9871634a/" className="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-xl" aria-label="Linkedin" >
-                <i className="ri-linkedin-line border-1 rounded-full border-gray-600 p-2 hover:border-0 hover:bg-gray-300 duration-200"></i>
-                </a></li>
-
-                
-                
-            </ul>
-            <div className="mt-3 flex items-center">
-                
-            </div>
-        </div>
-    )
+              ) : (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.label}
+                  className="p-4 rounded-full border border-gray-300 hover:bg-gray-100 transition-all inline-flex items-center justify-center"
+                >
+                  {item.icon}
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
 }

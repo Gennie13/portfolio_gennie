@@ -31,9 +31,12 @@ export default function Menu() {
                
 
                 {/* Theme Toggle Button */}
+                {/*
+                
                 <div className="flex aspect-square cursor-pointer items-center justify-center rounded-full" style={{ width: "40px" }}>
                     <ThemeToggle/>
                 </div>
+                */}
             </div>
         </div>
     )

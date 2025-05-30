@@ -5,19 +5,19 @@ import OtherEdu from "@/components/OtherEdu";
 import Work from "@/components/Work";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
+import { Projects } from "@/components/Projects";
 
 export default function Home() {
   return (
-    <div className="max-w-3xl mx-auto py-12 px-16">
-      <main className="flex flex-col space-y-6">
-        <Hero/>
-        <About/>
-        <Work/>
-        <Education/>
-        <OtherEdu/>
-        <Skills/>
-        <Contact/>
-      </main>
-    </div>
+    <main className="flex flex-col">
+      <Hero />
+      <About />
+      <Work/>
+      <Education/>
+      <OtherEdu/>
+      <Skills/>
+      <Contact />
+    </main>
   );
 }
+

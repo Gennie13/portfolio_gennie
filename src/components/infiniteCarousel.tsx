@@ -1,48 +1,30 @@
-"use client"
-import React, { useEffect, useRef } from "react";
+"use client";
+import React from "react";
 import { Button } from "./ui/button";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
-export interface Skill {
-    name: string;
-}
-const InfiniteCarousel = ({skills}:{
-    skills: string[]
-}) => {
-    const scrollRef = useRef<HTMLDivElement>(null);
-    useEffect(() => {
-        const scroller = scrollRef.current;
-        function addAnimation() {
-            if(!scroller) return;
-            const innerScroller = scroller.querySelector('.scroll_inner');
-            if(!innerScroller) return;
-            if(innerScroller.getAttribute("data-cloned")=== "true") return;
-            const innerScrollerChildren = Array.from(innerScroller.children);
+const InfiniteCarousel = ({ skills }: { skills: string[] }) => {
+  const colors = [
+    "bg-red-500",
+    "bg-blue-500",
+    "bg-green-500",
+    "bg-yellow-500",
+    "bg-pink-500",
+  ];
 
-            innerScrollerChildren.forEach((btn) => {
-                const btnSkills = btn.cloneNode(true) as HTMLElement
-                innerScroller.appendChild(btnSkills);
-            })
-            innerScroller.setAttribute("data-cloned", "true");
-        }
-        addAnimation();
-    }, []);
-    return (
-        <ScrollArea className="w-full">
-            <div ref={scrollRef} className="w-full scroller ">
-                <div className="scroll_inner flex gap-4 py-4 animate-infinite_scroll">
-                    {[...skills,...skills].map((skill, index) => {
-                        return (
-                            <Button key={index} className="min-w-max bg-violet-300 hover:text-white p-2 rounded-lg shadow-md text-gray-900">
-                                {skill}
-                            </Button>
-                        )
-                    })}
-                </div>
-            </div>
-            <ScrollBar orientation="horizontal" />
-        </ScrollArea>
-    )
-}
+  return (
+    <div className="w-full overflow-x-auto whitespace-nowrap px-2 py-4 scroll-smooth scroll-snap-x scrollbar-hide">
+      <div className="inline-flex gap-3 min-w-max">
+        {skills.map((skill, i) => (
+          <Button
+            key={`${skill}-${i}`}
+            className={`snap-start ${colors[i % colors.length]} text-white px-4 py-2 rounded-full shadow font-medium`}
+          >
+            {skill}
+          </Button>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default InfiniteCarousel
+export default InfiniteCarousel;

@@ -1,14 +1,23 @@
 import React from "react";
 
 export default function About() {
-    return(
-        <div id="about" className="mb-10">
-            <div className="text-xl font-bold">About</div>
-            <div className="max-w-full text-pretty text-sm text-muted-foreground dark:prose-invert mt-3">
-                <p>
-                With a background in banking, I am currently transitioning into the world of software development. My passion for technology and innovation drives me to explore new challenges and create solutions that make a meaningful impact. I am dedicated to continuous learning and development, and am excited to bring my skills in problem-solving, analytical thinking, and creativity into the field of software development. My journey is just beginning, and I am eager to contribute to projects that combine my understanding of business processes with cutting-edge technologies.
-                </p>
-            </div>
-        </div>
-    )
+  return (
+   <section id="about" className="py-16 px-6 bg-white text-brand-black">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6 border-b-4 border-brand-red inline-block">About Me</h2>
+        <p className="text-lg leading-relaxed mb-6">
+          Hello, my name is Gennie — I’m a full-stack developer who is more passionate about backend development, database architecture, security, and data flow.
+        </p>
+        <p className="text-lg leading-relaxed mb-6">
+          I enjoy working with technologies like Node.js, Express, MongoDB, and PostgreSQL to build APIs, handle authentication, and work with real-time data. What excites me most is building clean and efficient backend solutions.
+        </p>
+        <p className="text-lg leading-relaxed mb-6">
+          While I have less experience with UI/UX and frontend design, I focus on developing systems with clean architecture and logical structure. My goal is to write reusable and maintainable backend code for every project I build.
+        </p>
+        <p className="text-lg leading-relaxed">
+          In my free time, I enjoy studying data structures, learning performance optimization techniques, and experimenting with my own side projects. I also care deeply about code quality, scalability, and security.
+        </p>
+      </div>
+    </section>
+  );
 }

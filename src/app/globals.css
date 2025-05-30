@@ -129,3 +129,7 @@
   width: max-content;
   flex-wrap: nowrap;
 }
+html.dark {
+  background-color: #000;
+  color: #fff;
+}

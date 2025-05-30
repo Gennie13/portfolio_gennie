@@ -1,28 +1,42 @@
-import React from "react";  
+import React from "react";
 
 export default function Education() {
-    return (
-        <div id="edu my-10">
-            <div className="flex min-h-0 flex-col gap-y-3">
-                <h2 className="text-xl font-bold">Education</h2>
-                <a href="https://portal.num.edu.mn/en/" className="block cursor-pointer mb-4">
-                    <div className="rounded-lg bg-card text-card-foreground flex dark:bg-transparent">
-                        <div className="flex w-full">
-                            <img src="/num.jpg" alt="NUM edu" className="h-10 w-10 rounded-lg object-cover"/>
-                            <div className="flex flex-col ml-4 items-center w-full">
-                                <div className="flex justify-between items-center gap-x-2 text-base w-full">
-                                    <h3 className="inline-flex items-center justify-center font-semibold leading-none  sx:text-sm">National University of Mongolia</h3>
-                                    <div className="text-xs sm:text-sm text-muted-foreground text-right">September 2016 - May 2020</div>
-                                </div>
-                                <div className="flex flex-col justify-start text-xs w-full">
-                                    <p>Bachelor of Business Administration</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </a>
+  return (
+    <section id="education" className="py-16 px-6 bg-gray-50 text-brand-black">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-10 border-b-4 border-brand-red inline-flex items-center gap-2">
+          
+          Education
+        </h2>
+
+        <a
+          href="https://portal.num.edu.mn/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block bg-white hover:bg-gray-100 p-5 rounded-xl shadow transition"
+        >
+          <div className="flex items-center gap-4">
+            <img
+              src="/num.jpg"
+              alt="NUM"
+              className="h-12 w-12 rounded-lg object-cover"
+            />
+            <div className="flex-1">
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-semibold">
+                  National University of Mongolia
+                </h3>
+                <span className="text-sm text-gray-500">
+                  Sept 2016 – May 2020
+                </span>
+              </div>
+              <p className="text-sm text-gray-700">
+                Bachelor of Business Administration
+              </p>
             </div>
-        </div>
-    )
+          </div>
+        </a>
+      </div>
+    </section>
+  );
 }
