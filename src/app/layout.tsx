@@ -10,7 +10,6 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -24,14 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.variable}>
       <head>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
         />
       </head>
-      <body className={`${montserrat.variable} antialiased min-h-screen`}>
+      <body className="antialiased min-h-screen">
         <ThemeProvider>
           {children}
           <Menu />
