@@ -149,7 +149,7 @@ export default function Contact() {
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-4xl relative z-10">
+      <div className="max-w-4xl relative z-10 mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
