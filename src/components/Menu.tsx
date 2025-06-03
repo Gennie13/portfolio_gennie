@@ -3,8 +3,8 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Menu() {
     return (
-        <div className="pointer-events-none fixed inset-x-0 bottom-0 mx-auto mb-4 flex origin-bottom h-full max-h-14">
-            <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg dark:bg-background"></div>
+        <div className="z-50 pointer-events-none fixed inset-x-0 bottom-0 mx-auto mb-4 flex origin-bottom h-full max-h-14">
+            <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg dark:bg-background/70"></div>
             <div className="w-max p-2 rounded-full border z-50 pointer-events-auto relative mx-auto flex gap-6 min-h-full h-full items-center px-1 bg-background shadow-md dark:border dark:shadow-inner ">
                 {/* Home button */}
                 <div className="flex aspect-square cursor-pointer items-center justify-center rounded-full" style={{ width: "40px" }}>
@@ -30,13 +30,13 @@ export default function Menu() {
 
                
 
-                {/* Theme Toggle Button */}
-                {/*
+                {/* Toggle Button */}
+               
                 
-                <div className="flex aspect-square cursor-pointer items-center justify-center rounded-full" style={{ width: "40px" }}>
+                <div className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-blue-500 transition-colors duration-200 dark:hover:bg-blue-600" style={{ width: "40px" }}>
                     <ThemeToggle/>
                 </div>
-                */}
+               
             </div>
         </div>
     )

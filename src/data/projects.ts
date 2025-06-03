@@ -42,8 +42,6 @@ export const projects = [
       "JWT",
       "Docker",
       "Vercel",
-      "CI/CD",
-      "Artillery",
     ],
     image: [
         "/medNote1.png",
