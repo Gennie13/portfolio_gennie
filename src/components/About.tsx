@@ -37,6 +37,7 @@ export default function About() {
               working with tools like{" "}
               <span className="font-medium">Node.js</span>,{" "}
               <span className="font-medium">Express</span>,{" "}
+              <span className="font-medium">TypeScript</span>,{" "}
               <span className="font-medium">MongoDB</span>, and{" "}
               <span className="font-medium">PostgreSQL</span> to create powerful
               backend systems.
@@ -51,17 +52,12 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold mb-4 text-brand-red">
-            My Development Philosophy
-          </h3>
           <div className="space-y-6 text-lg leading-relaxed">
             <p>
               While I have less experience with UI/UX, I put strong emphasis on
               writing maintainable, reusable, and logically structured backend
               code. I value clarity over cleverness and always aim for scalable
               architecture.
-            </p>
-            <p>
               In my free time, I enjoy diving into data structures, exploring
               performance tuning techniques, and building side projects to
               challenge myself. I’m deeply committed to code quality, security,

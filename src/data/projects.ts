@@ -33,15 +33,12 @@ export const projects = [
     description:
       "A comprehensive system designed to digitize hospital operations including patient registration, clinical modules, diagnostics, pharmacy, appointment scheduling, billing, and access control. The system aims to automate workflows, speed up service, and centralize patient data securely. Currently under active development.",
     technologies: [
-      "React / Next.js",
+      "Next.js (TypeScript)",
       "Tailwind CSS",
-      "Node.js",
-      "NestJS",
       "MongoDB",
-      "PostgreSQL",
       "JWT",
-      "Docker",
-      "Vercel",
+      "shadcn/ui",
+      "Zustand",
     ],
     image: [
         "/medNote1.png",
@@ -49,6 +46,10 @@ export const projects = [
         "/medNote3.png",
         "/medNote4.png",
         "/medNote5.png",
+        "/medNote6.png",
+        "/medNote7.png",
+        "/medNote8.png",
+        "/medNote9.png",
     ],
     links: [
       { label: "Frontend Code", url: "https://github.com/Gennie13/MedNote-Frontend" },
